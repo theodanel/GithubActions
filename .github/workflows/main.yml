@@ -16,7 +16,8 @@ jobs:
         python-version: '3.10'
 
     - name: Installation des dépendances
-        run: pip install fastapi locust pytest uvicorn coverage httpx pytest-mock pytest-profiling pylint sqlalchemy pydantic
+      run: 
+        pip install fastapi locust pytest uvicorn coverage httpx pytest-mock pytest-profiling pylint sqlalchemy pydantic
 
     - name: Execution des tests
       run: 
