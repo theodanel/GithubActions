@@ -24,5 +24,10 @@ jobs:
 
     - name: Execution des tests
       run: 
-        coverage run -m pytest &&
-        coverage report -m
+        coverage run -m pytest; coverage xml
+
+    - name: Get coverage
+      uses: orgoro/coverage@v3.1
+      with:
+        coverageFile: coverage.xml
+        token: ${{ secrets.EPSI_TOKEN }}
